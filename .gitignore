@@ -1,0 +1,6 @@
+# Nix build artifacts
+result/
+.nix-profile
+.nix-channerls
+*.lock
+*.swp
