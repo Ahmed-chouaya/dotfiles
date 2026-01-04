@@ -2,7 +2,7 @@
   description = "Milos + Caelestia setup";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -15,7 +15,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, caelestia-shell, ... }:
+  outputs = { nixpkgs, home-manager, caelestia-shell, ... }:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -25,8 +25,8 @@
         inherit pkgs;
 
         modules = [
-          ./home.nix
           caelestia-shell.homeManagerModules.default
+          ./home.nix
         ];
       };
   };
