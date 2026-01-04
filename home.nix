@@ -72,8 +72,8 @@
   # Hyprland configuration
   # -------------------------------
   # Main Hyprland config file
-  home.file.".config/hypr/hyprland.conf".source = pkgs.lib.cleanSource "./hypr/hyprland/hyprland.conf";
+  home.homeDirectory.".config/hypr/hyprland.conf".source = pkgs.lib.cleanSource "./hypr/hyprland/hyprland.conf";
 
   # Modular files folder (env.conf, general.conf, etc.)
-  home.file.".config/hypr/hyprland/".source = pkgs.lib.cleanSource "./hypr/hyprland";
+  home.homeDirectory.".config/hypr/hyprland/".source = pkgs.lib.cleanSource "./hypr/hyprland";
 }
