@@ -58,4 +58,16 @@
     XDG_SESSION_TYPE = "wayland";
     SYSTEM_THEME = "dark";
   };
+
+  # ============================
+  # Hyprland configuration
+  # ============================
+
+  # Main Hyprland config
+  home.file.".config/hypr/hyprland.conf".source =
+    ./hyprland/hyprland.conf;
+
+  # Modular Hyprland configs (env.conf, general.conf, etc.)
+  home.file.".config/hypr/hyprland/".source =
+    ./hyprland;
 }
