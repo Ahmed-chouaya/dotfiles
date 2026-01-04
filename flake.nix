@@ -18,7 +18,12 @@
   outputs = { nixpkgs, home-manager, caelestia-shell, ... }:
   let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    
   in {
     homeConfigurations.ahmed =
       home-manager.lib.homeManagerConfiguration {
