@@ -26,7 +26,7 @@
 
         modules = [
           ./home.nix
-          caelestia-shell.homeModule
+          caelestia-shell.homeManagerModules.default
         ];
       };
   };
