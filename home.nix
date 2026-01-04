@@ -1,10 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, flake, ... }:
 
 {
   home.username = "ahmed";
   home.homeDirectory = "/home/ahmed";
   home.stateVersion = "25.11";
 
+  # -------------------------------
+  # Packages
+  # -------------------------------
   home.packages = with pkgs; [
     # Runtime deps Caelestia expects
     wl-clipboard
@@ -37,6 +40,9 @@
 
   programs.git.enable = true;
 
+  # -------------------------------
+  # Caelestia
+  # -------------------------------
   programs.caelestia = {
     enable = true;
 
@@ -53,21 +59,21 @@
     cli.enable = true;
   };
 
+  # -------------------------------
+  # Session environment
+  # -------------------------------
   home.sessionVariables = {
     QT_QPA_PLATFORM = "wayland";
     XDG_SESSION_TYPE = "wayland";
     SYSTEM_THEME = "dark";
   };
 
-  # ============================
+  # -------------------------------
   # Hyprland configuration
-  # ============================
+  # -------------------------------
+  # Main Hyprland config file
+  home.file.".config/hypr/hyprland.conf".source = "${flake}/hyprland/hyprland.conf";
 
-  # Main Hyprland config
-  home.file.".config/hypr/hyprland.conf".source =
-    ./hyprland/hyprland.conf;
-
-  # Modular Hyprland configs (env.conf, general.conf, etc.)
-  home.file.".config/hypr/hyprland/".source =
-    ./hyprland;
+  # Modular files folder (env.conf, general.conf, etc.)
+  home.file.".config/hypr/hyprland/".source = "${flake}/hyprland";
 }
