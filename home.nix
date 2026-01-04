@@ -56,7 +56,7 @@
   # --------------------------
   # Caelestia Shell - Official Home-Manager module
   # --------------------------
-  programs.caelestia = {
+  programs.caelestia-shell = {
     enable = true;
     systemd = {
       enable = false;  # start manually from compositor
