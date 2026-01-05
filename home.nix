@@ -61,7 +61,7 @@
     inotify-tools
     app2unit
     eza
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     papirus-icon-theme
     kdePackages.qt5ct
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
