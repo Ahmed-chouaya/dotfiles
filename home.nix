@@ -60,7 +60,7 @@
     source = ./hypr;
     recursive = true;
     force = true;
-    onChange = "chmod +x $HOME/.config/hypr/hyprland/scripts/*.fish";
+    onChange = "chmod +x $HOME/.config/hypr/scripts/*.fish";
   };
 
   # -------------------------------
