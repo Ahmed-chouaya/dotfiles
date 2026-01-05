@@ -53,7 +53,7 @@
     pavucontrol
     hyprpicker
     ydotool
-    qt6ct
+    kdePackages.qt6ct
     sweet-cursors
   ];
 
