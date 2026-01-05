@@ -63,6 +63,14 @@
     onChange = "chmod +x $HOME/.config/hypr/scripts/*.fish";
   };
 
+  # Create hyprland desktop entry for proper session launching
+  xdg.desktopEntries."Hyprland" = {
+    name = "Hyprland";
+    comment = "Hyprland Tiling Window Manager";
+    exec = "Hyprland";
+    type = "Application";
+  };
+
   # -------------------------------
   # Caelestia
   # -------------------------------
