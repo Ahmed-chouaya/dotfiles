@@ -63,7 +63,7 @@
     eza
     adwaita-icon-theme
     papirus-icon-theme
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    texlivePackages.jetbrainsmono-otf
     starship
     btop
     fastfetch
