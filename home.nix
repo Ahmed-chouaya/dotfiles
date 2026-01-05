@@ -43,11 +43,11 @@
     # Additional packages referenced in configs
     cliphist
     gnome-keyring
-    polkit_gnomeAuthenticationAgent
+    polkit_gnome
     trash-cli
     geoclue2
     gammastep
-    (github-desktop.override { withKeyring = false; })
+    github-desktop
     nemo
     qps
     pavucontrol
@@ -59,7 +59,7 @@
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
     inotify-tools
-    unstable.app2unit
+    app2unit
     eza
     gnome.adwaita-icon-theme
     papirus-icon-theme
