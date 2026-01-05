@@ -1,5 +1,5 @@
 {
-  description = "Milos + Caelestia setup";
+  description = "Milos_nixos + Caelestia setup";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
