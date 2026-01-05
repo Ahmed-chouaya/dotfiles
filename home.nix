@@ -49,7 +49,7 @@
     gammastep
     github-desktop
     nemo
-    qps
+    lxqt.qps
     pavucontrol
     hyprpicker
     ydotool
