@@ -85,9 +85,17 @@
     settings = {
       bar.status.showBattery = false;
       paths.wallpaperDir = "~/Pictures/Wallpapers";
+      paths.configDir = "~/.config/caelestia";
     };
 
     cli.enable = true;
+  };
+
+  # Ensure caelestia config directory is writable
+  home.file.".config/caelestia" = {
+    source = ./caelestia-config;
+    recursive = false;
+    force = false;
   };
 
   # -------------------------------
