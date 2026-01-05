@@ -65,13 +65,5 @@
   home.sessionVariables = {
     QT_QPA_PLATFORM = "wayland";
     XDG_SESSION_TYPE = "wayland";
-    SYSTEM_THEME = "dark";
   };
-
-  # -------------------------------
-  # Hyprland configuration
-  # -------------------------------
-
-  # Modular files folder (env.conf, general.conf, etc.)
-  home.file.".config/hypr/hyprland".source = pkgs.lib.cleanSource ./hypr/hyprland;
 }
