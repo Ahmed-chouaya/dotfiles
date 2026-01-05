@@ -43,13 +43,13 @@
     # Additional packages referenced in configs
     cliphist
     gnome-keyring
-    polkit_gnome
+    polkit_gnomeAuthenticationAgent
     trash-cli
     geoclue2
     gammastep
-    github-desktop
+    (github-desktop.override { withKeyring = false; })
     nemo
-    lxqt.qps
+    qps
     pavucontrol
     hyprpicker
     ydotool
@@ -59,9 +59,9 @@
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
     inotify-tools
-    app2unit
+    unstable.app2unit
     eza
-    adw-gtk-theme
+    gnome.adwaita-icon-theme
     papirus-icon-theme
     kdePackages.qt5ct
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
