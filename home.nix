@@ -43,7 +43,7 @@
     # Additional packages referenced in configs
     cliphist
     gnome-keyring
-    polkit-gnome
+    polkit_gnome
     trash-cli
     geoclue2
     gammastep
