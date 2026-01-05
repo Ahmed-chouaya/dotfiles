@@ -48,13 +48,18 @@
   # -------------------------------
   wayland.windowManager.hyprland = {
     enable = true;
-    settings = {};
+    settings = {
+      # Suppress warning - actual config is in copied files
+      "$terminal" = "foot";
+      "$browser" = "brave";
+    };
   };
 
   # Copy hyprland configuration files
   home.file.".config/hypr" = {
     source = ./hypr;
     recursive = true;
+    force = true;
     onChange = "chmod +x $HOME/.config/hypr/hyprland/scripts/*.fish";
   };
 
