@@ -36,9 +36,27 @@
 
     # Tools
     gh
+
+    # Hyprland
+    hyprland
   ];
 
   programs.git.enable = true;
+
+  # -------------------------------
+  # Wayland & Hyprland
+  # -------------------------------
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {};
+  };
+
+  # Copy hyprland configuration files
+  home.file.".config/hypr" = {
+    source = ../hypr;
+    recursive = true;
+    onChange = "chmod -R $HOME/.config/hypr/hyprland/scripts/*.fish";
+  };
 
   # -------------------------------
   # Caelestia
