@@ -91,12 +91,11 @@
     cli.enable = true;
   };
 
-  # Ensure caelestia config directory is writable
-  home.file.".config/caelestia" = {
-    source = ./caelestia-config;
-    recursive = false;
-    force = false;
-  };
+  # Ensure caelestia config directory exists and is writable
+  home.activation.caelestiaConfigDir = home-manager.lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p $HOME/.config/caelestia
+    chmod 755 $HOME/.config/caelestia
+  '';
 
   # -------------------------------
   # Session environment
