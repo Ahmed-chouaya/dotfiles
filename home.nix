@@ -53,9 +53,9 @@
 
   # Copy hyprland configuration files
   home.file.".config/hypr" = {
-    source = ../hypr;
+    source = ./hypr;
     recursive = true;
-    onChange = "chmod -R $HOME/.config/hypr/hyprland/scripts/*.fish";
+    onChange = "chmod +x $HOME/.config/hypr/hyprland/scripts/*.fish";
   };
 
   # -------------------------------

@@ -24,6 +24,9 @@
       config.allowUnfree = true;
     };
     
+    # Include the hypr directory in the flake inputs
+    hyprDir = ./hypr;
+    
   in {
     homeConfigurations.ahmed =
       home-manager.lib.homeManagerConfiguration {
