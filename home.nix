@@ -63,7 +63,6 @@
     eza
     adwaita-icon-theme
     papirus-icon-theme
-    kdePackages.qt5ct
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     starship
     btop
