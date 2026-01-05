@@ -85,17 +85,10 @@
     settings = {
       bar.status.showBattery = false;
       paths.wallpaperDir = "~/Pictures/Wallpapers";
-      paths.configDir = "~/.config/caelestia";
     };
 
     cli.enable = true;
   };
-
-  # Ensure caelestia config directory exists and is writable
-  home.activation.caelestiaConfigDir = home-manager.lib.hm.dag.entryAfter ["writeBoundary"] ''
-    mkdir -p $HOME/.config/caelestia
-    chmod 755 $HOME/.config/caelestia
-  '';
 
   # -------------------------------
   # Session environment
