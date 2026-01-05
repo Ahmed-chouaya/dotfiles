@@ -39,6 +39,22 @@
 
     # Hyprland
     hyprland
+
+    # Additional packages referenced in configs
+    cliphist
+    gnome-keyring
+    polkit-gnome
+    trash-cli
+    geoclue2
+    gammastep
+    github-desktop
+    nemo
+    qps
+    pavucontrol
+    hyprpicker
+    ydotool
+    qt6ct
+    sweet-cursors
   ];
 
   programs.git.enable = true;
