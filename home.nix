@@ -23,6 +23,7 @@
     # Personal Packages
     brave
     gh
+    opencode
   ];
 
   programs.git.enable = true;
